@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FA59D894642BF66586BED30 /* Pods_Pokemon_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5ED11D00F70DD2D122FB99 /* Pods_Pokemon_app.framework */; };
 		AA030AD21CF91E1A00939B8F /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA030AD11CF91E1A00939B8F /* csv.swift */; };
 		AA089C011CF63EDA00A94E22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA089C001CF63EDA00A94E22 /* AppDelegate.swift */; };
 		AA089C031CF63EDA00A94E22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA089C021CF63EDA00A94E22 /* ViewController.swift */; };
@@ -19,9 +20,11 @@
 		AAA086F81CFCE69A00E11BD2 /* pokefont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAA086F71CFCE69A00E11BD2 /* pokefont.ttf */; };
 		AAA086FA1CFCEF0900E11BD2 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAA086F91CFCEF0900E11BD2 /* music.mp3 */; };
 		AAA086FC1CFD022500E11BD2 /* MonsterDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA086FB1CFD022500E11BD2 /* MonsterDetailVC.swift */; };
+		AAE1B0FC1CFF90C600616DBB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1B0FB1CFF90C600616DBB /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F5ED11D00F70DD2D122FB99 /* Pods_Pokemon_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokemon_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA030AD11CF91E1A00939B8F /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		AA089BFD1CF63EDA00A94E22 /* Pokemon-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pokemon-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA089C001CF63EDA00A94E22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		AAA086F71CFCE69A00E11BD2 /* pokefont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokefont.ttf; sourceTree = "<group>"; };
 		AAA086F91CFCEF0900E11BD2 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		AAA086FB1CFD022500E11BD2 /* MonsterDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterDetailVC.swift; sourceTree = "<group>"; };
+		AAE1B0FB1CFF90C600616DBB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B94697B9253863E0C8F534F4 /* Pods-Pokemon-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pokemon-app/Pods-Pokemon-app.release.xcconfig"; sourceTree = "<group>"; };
+		FD2E46918647BDB21E4B4FF2 /* Pods-Pokemon-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pokemon-app/Pods-Pokemon-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,16 +49,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FA59D894642BF66586BED30 /* Pods_Pokemon_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68C55D5504859A0174C7E09E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD2E46918647BDB21E4B4FF2 /* Pods-Pokemon-app.debug.xcconfig */,
+				B94697B9253863E0C8F534F4 /* Pods-Pokemon-app.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7FA67F8E4A83F5D58176B7CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F5ED11D00F70DD2D122FB99 /* Pods_Pokemon_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AA030ACE1CF91D5D00939B8F /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				AA030AD11CF91E1A00939B8F /* csv.swift */,
+				AAE1B0FB1CFF90C600616DBB /* Constants.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -81,6 +106,8 @@
 			children = (
 				AA089BFF1CF63EDA00A94E22 /* Pokemon-app */,
 				AA089BFE1CF63EDA00A94E22 /* Products */,
+				68C55D5504859A0174C7E09E /* Pods */,
+				7FA67F8E4A83F5D58176B7CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA089C0F1CF63EDA00A94E22 /* Build configuration list for PBXNativeTarget "Pokemon-app" */;
 			buildPhases = (
+				D6FDF33D69B83CE568AF09BB /* 📦 Check Pods Manifest.lock */,
 				AA089BF91CF63EDA00A94E22 /* Sources */,
 				AA089BFA1CF63EDA00A94E22 /* Frameworks */,
 				AA089BFB1CF63EDA00A94E22 /* Resources */,
+				09A4818840A88C744D9AF269 /* 📦 Embed Pods Frameworks */,
+				024181901B39681252BB36EE /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +225,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		024181901B39681252BB36EE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pokemon-app/Pods-Pokemon-app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		09A4818840A88C744D9AF269 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pokemon-app/Pods-Pokemon-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6FDF33D69B83CE568AF09BB /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AA089BF91CF63EDA00A94E22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -204,6 +282,7 @@
 				AA78EA971CF664F3003DB3CF /* MonsterCell.swift in Sources */,
 				AA089C031CF63EDA00A94E22 /* ViewController.swift in Sources */,
 				AA089C011CF63EDA00A94E22 /* AppDelegate.swift in Sources */,
+				AAE1B0FC1CFF90C600616DBB /* Constants.swift in Sources */,
 				AA78EA941CF65897003DB3CF /* Pokemon.swift in Sources */,
 				AA030AD21CF91E1A00939B8F /* csv.swift in Sources */,
 			);
@@ -318,6 +397,7 @@
 		};
 		AA089C101CF63EDA00A94E22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD2E46918647BDB21E4B4FF2 /* Pods-Pokemon-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Pokemon-app/Info.plist";
@@ -329,6 +409,7 @@
 		};
 		AA089C111CF63EDA00A94E22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B94697B9253863E0C8F534F4 /* Pods-Pokemon-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Pokemon-app/Info.plist";

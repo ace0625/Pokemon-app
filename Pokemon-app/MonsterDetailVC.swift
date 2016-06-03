@@ -8,17 +8,65 @@
 
 import UIKit
 
-class MonsterDetailVC: UIViewController {
-
-    var monster: Pokemon!
-    
+class MonsterDetailVC: UIViewController
+{
     @IBOutlet weak var detailLbl: UILabel!
+    @IBOutlet weak var mainImg: UIImageView!
+    @IBOutlet weak var descLbl: UILabel!
+    @IBOutlet weak var typeLbl: UILabel!
+    @IBOutlet weak var defenseLbl: UILabel!
+    @IBOutlet weak var heightLbl: UILabel!
+    @IBOutlet weak var monsterIdLbl: UILabel!
+    @IBOutlet weak var weightLbl: UILabel!
+    @IBOutlet weak var attackLbl: UILabel!
+    @IBOutlet weak var currentEvoImg: UIImageView!
+    @IBOutlet weak var nextEvoImg: UIImageView!
+    @IBOutlet weak var evoLbl: UILabel!
+   
+    var monster: Pokemon!
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
         detailLbl.text = monster.name
-        print(monster.name)
+        //print(monster.name)
+        let img = UIImage(named: "\(monster.monIdxId)")
+        mainImg.image = img
+        currentEvoImg.image = img
         
+        monster.downloadMonsterData
+        {
+            //This will be called after download is completed
+//            print("dowmload completed")
+            self.updateUI()
+        }
+    }
+    
+    func updateUI()
+    {
+        descLbl.text = monster.description
+        typeLbl.text = monster.type
+        defenseLbl.text = monster.defense
+        heightLbl.text = monster.height
+        monsterIdLbl.text = "\(monster.monIdxId)"
+        weightLbl.text = monster.weight
+        attackLbl.text = monster.attack
+        if monster.nextEvoId == ""
+        {
+            evoLbl.text = "There's no evolution"
+            nextEvoImg.hidden = true
+        }
+        else
+        {
+            evoLbl.hidden = false
+            nextEvoImg.image = UIImage(named: monster.nextEvoId)
+            
+            var nextEvo = "Next Evolution: \(monster.nextEvoText)"
+            if monster.nextEvoLvl != ""
+            {
+                nextEvo += " - LVL \(monster.nextEvoLvl)"
+            }
+        }
         
     }
 
@@ -27,15 +75,11 @@ class MonsterDetailVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func backBtnPressed(sender: AnyObject)
+    {
+        dismissViewControllerAnimated(true, completion: nil)
     }
-    */
+
+
 
 }
